@@ -10,6 +10,10 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>Simple_Demo</module>
+        <module>Simple_Demo</module>
+        <module>Thread_Demo</module>
+        <module>Galvin_MQ</module>
+        <module>Jmx_Server_Demo</module>
     </modules>
 
 

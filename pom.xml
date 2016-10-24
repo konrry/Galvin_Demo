@@ -14,6 +14,12 @@
         <module>Thread_Demo</module>
         <module>Galvin_MQ</module>
         <module>Jmx_Server_Demo</module>
+        <module>Kafka_Demo</module>
+        <module>ES_Demo</module>
+        <module>Galvin_Comm</module>
+        <module>Dubbo_Provider_Demo</module>
+        <module>Dubbo_Consumer_Demo</module>
+        <module>Algorithm_Demo</module>
     </modules>
 
 

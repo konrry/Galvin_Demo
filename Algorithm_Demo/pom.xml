@@ -9,16 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>Jmx_Server_Demo</artifactId>
+    <artifactId>Algorithm_Demo</artifactId>
 
-    <dependencies>
-
-        <dependency>
-            <groupId>com.sun.jdmk</groupId>
-            <artifactId>jmxtools</artifactId>
-            <version>1.2.1</version>
-        </dependency>
-
-    </dependencies>
 
 </project>

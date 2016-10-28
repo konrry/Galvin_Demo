@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Galvin_Demo.iml" filepath="$PROJECT_DIR$/Galvin_Demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Galvin_MQ/Galvin_MQ.iml" filepath="$PROJECT_DIR$/Galvin_MQ/Galvin_MQ.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Jmx_Server_Demo/Jmx_Server_Demo.iml" filepath="$PROJECT_DIR$/Jmx_Server_Demo/Jmx_Server_Demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Simple_Demo/Simple_Demo.iml" filepath="$PROJECT_DIR$/Simple_Demo/Simple_Demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Thread_Demo/Thread_Demo.iml" filepath="$PROJECT_DIR$/Thread_Demo/Thread_Demo.iml" />
+    </modules>
+  </component>
+</project>

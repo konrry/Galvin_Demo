@@ -2,9 +2,16 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/Algorithm_Demo/Algorithm_Demo.iml" filepath="$PROJECT_DIR$/Algorithm_Demo/Algorithm_Demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Dubbo_Consumer_Demo/Dubbo_Consumer_Demo.iml" filepath="$PROJECT_DIR$/Dubbo_Consumer_Demo/Dubbo_Consumer_Demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Dubbo_Provider_Demo/Dubbo_Provider_Demo.iml" filepath="$PROJECT_DIR$/Dubbo_Provider_Demo/Dubbo_Provider_Demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ES_Demo/ES_Demo.iml" filepath="$PROJECT_DIR$/ES_Demo/ES_Demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Galvin_Comm/Galvin_Comm.iml" filepath="$PROJECT_DIR$/Galvin_Comm/Galvin_Comm.iml" />
       <module fileurl="file://$PROJECT_DIR$/Galvin_Demo.iml" filepath="$PROJECT_DIR$/Galvin_Demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/Galvin_MQ/Galvin_MQ.iml" filepath="$PROJECT_DIR$/Galvin_MQ/Galvin_MQ.iml" />
       <module fileurl="file://$PROJECT_DIR$/Jmx_Server_Demo/Jmx_Server_Demo.iml" filepath="$PROJECT_DIR$/Jmx_Server_Demo/Jmx_Server_Demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Kafka_Demo/Kafka_Demo.iml" filepath="$PROJECT_DIR$/Kafka_Demo/Kafka_Demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Python_Demo/Python_Demo.iml" filepath="$PROJECT_DIR$/Python_Demo/Python_Demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/Simple_Demo/Simple_Demo.iml" filepath="$PROJECT_DIR$/Simple_Demo/Simple_Demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/Thread_Demo/Thread_Demo.iml" filepath="$PROJECT_DIR$/Thread_Demo/Thread_Demo.iml" />
     </modules>

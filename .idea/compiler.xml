@@ -22,10 +22,25 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
+        <module name="Algorithm_Demo" />
+        <module name="Dubbo_Consumer_Demo" />
+        <module name="ES_Demo" />
+        <module name="Galvin_Comm" />
         <module name="Galvin_MQ" />
+        <module name="Hadoop_Demo" />
         <module name="Jmx_Server_Demo" />
+        <module name="Kafka_Demo" />
+        <module name="Lvmm_Log_Demo" />
         <module name="Simple_Demo" />
         <module name="Thread_Demo" />
+        <module name="Zk_Demo" />
+      </profile>
+      <profile default="false" name="Annotation profile for Galvin_Demo" enabled="true">
+        <sourceOutputDir name="../Dubbo_Consumer_Demo/target/generated-sources/annotations" />
+        <sourceTestOutputDir name="../Dubbo_Consumer_Demo/target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="Dubbo_Provider_Demo" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="1.7" />

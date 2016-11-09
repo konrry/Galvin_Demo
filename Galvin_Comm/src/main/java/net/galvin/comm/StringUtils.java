@@ -9,5 +9,4 @@ public class StringUtils {
         return value == null ? true : value.trim().length() <= 0;
     }
 
-
 }

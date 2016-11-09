@@ -20,6 +20,9 @@
         <module>Dubbo_Provider_Demo</module>
         <module>Dubbo_Consumer_Demo</module>
         <module>Algorithm_Demo</module>
+        <module>Zk_Demo</module>
+        <module>Hadoop_Demo</module>
+        <module>Lvmm_Log_Demo</module>
     </modules>
 
 

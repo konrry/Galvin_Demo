@@ -23,6 +23,7 @@
         <module>Zk_Demo</module>
         <module>Hadoop_Demo</module>
         <module>Lvmm_Log_Demo</module>
+        <module>Rpc_Demo</module>
     </modules>
 
 

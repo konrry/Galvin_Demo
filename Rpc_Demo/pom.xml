@@ -12,6 +12,12 @@
     <artifactId>Rpc_Demo</artifactId>
 
 
-    <dependencies></dependencies>
+    <dependencies>
+        <dependency>
+            <groupId>asm</groupId>
+            <artifactId>asm-all</artifactId>
+            <version>3.3.1</version>
+        </dependency>
+    </dependencies>
 
 </project>

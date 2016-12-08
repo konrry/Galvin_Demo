@@ -39,8 +39,7 @@ public class InterfaceHandler extends ClassLoader implements Opcodes {
         mv.visitEnd();
 
         Method[] methods = clazz.getMethods();
-        for (Method method : methods)
-        {
+        for (Method method : methods){
             makeMethod(cw, method.getName(), className);
         }
 

@@ -15,9 +15,12 @@ public class GeneratorClass {
     public static void main(String[] args) throws IOException {
         //生成一个类只需要ClassWriter组件即可
         ClassWriter cw = new ClassWriter(0);
+
         //通过visit方法确定类的头部信息
+        //JSK版本   Java修饰符   类名称   暂时不知道   父类  接口
         cw.visit(Opcodes.V1_5, Opcodes.ACC_PUBLIC+Opcodes.ACC_ABSTRACT+Opcodes.ACC_INTERFACE,
                 "com/asm3/Comparable", null, "java/lang/Object", new String[]{"com/asm3/Mesurable"});
+
         //定义类的属性
         cw.visitField(Opcodes.ACC_PUBLIC+Opcodes.ACC_FINAL+Opcodes.ACC_STATIC,
                      "LESS", "I", null, new Integer(-1)).visitEnd();
@@ -31,7 +34,7 @@ public class GeneratorClass {
         cw.visitEnd(); //使cw类已经完成
         //将cw转换成字节数组写到文件里面去
         byte[] data = cw.toByteArray();
-        File file = new File("/home/qchu/lvmm/files/Comparable.class");
+        File file = new File("d:/Comparable.class");
         if(!file.exists()){
             file.createNewFile();
         }

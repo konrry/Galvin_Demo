@@ -11,7 +11,7 @@ import io.netty.util.ReferenceCountUtil;
 import java.util.concurrent.Executors;
 
 /**
- * ChannelInboundHandlerAdapter实现了ChannelInboundHandler，提供了多种事件处理方法。
+ * ChannelInboundHandlerAdapter 实现了 ChannelInboundHandler，提供了多种事件处理方法。
  */
 public class DiscardServerHandler extends ChannelInboundHandlerAdapter {
 
@@ -32,27 +32,29 @@ public class DiscardServerHandler extends ChannelInboundHandlerAdapter {
 
         /**
          * 和平常一样，我们写了一个结构化的消息。
-
-         But wait, where's the flip? Didn't we used to call java.nio.ByteBuffer.flip() before sending a message in NIO?
-         ByteBuf does not have such a method because it has two pointers; one for read operations and the other for write operations.
-         The writer index increases when you write something to a ByteBuf while the reader index does not change.
-         The reader index and the writer index represents where the message starts and ends respectively.
-
-         In contrast, NIO buffer does not provide a clean way to figure out where the message content starts and ends without calling the flip method.
-         You will be in trouble when you forget to flip the buffer because nothing or incorrect data will be sent.
-         Such an error does not happen in Netty because we have different pointer for different operation types.
-         You will find it makes your life much easier as you get used to it -- a life without flipping out!
-         Another point to note is that the ChannelHandlerContext.write() (and writeAndFlush()) method returns a ChannelFuture. A ChannelFuture represents an I/O operation which has not yet occurred. It means, any requested operation might not have been performed yet because all operations are asynchronous in Netty. For example, the following code might close the connection even before a message is sent:
-
-         Channel ch = ...;
-         ch.writeAndFlush(message);
-         ch.close();
-         Therefore, you need to call the close() method after the ChannelFuture is complete, which was returned by the write() method, and it notifies its listeners when the write operation has been done. Please note that, close() also might not close the connection immediately, and it returns a ChannelFuture.
+         * 等一下，flip在哪里？难道我们在NIO中发消息之前不需要调用方法 java.nio.ByteBuffer.flip()。
+         * ByteBuf 没有这样的方法，因为它有两个指针。一个负责读操作，另外一个负责写操作。
+         * 当你往 ByteBuf 中写东西的时候，写的脚标会自动增长，读的脚标不会改变。
+         * 当消息开始和结束的时候，写和读的脚标都会重置。
+         * NIO buffer 不能很清楚的说出 消息内容的开始和结束位置，除非调用方法 flip。
+         * 忘记 flip 这个 buffer，会让人很麻烦，因为没有或者错误的数据会被发出去。
+         * 这个样的错误不会再netty中发生， 因为不同的操作类型有不同的指针。
+         * 注意到 方法 ChannelHandlerContext.write() (and writeAndFlush()) 会返回 对象 ChannelFuture。
+         * ChannelFuture代表一个 I/O 操作还没有被执行
+         * 也就是所有的请求操作也许还没有被执行，因为netty中所有的操作都是异步的。
+         * 举个例子，下面的例子中，连接关闭的时候，消息有可能还没有发出去。
+         * Channel ch = ...;
+         * ch.writeAndFlush(message);
+         * ch.close();
+         * 因此你需要在 ChannelFuture 完成之后，调用 close() 方法，会通知监听器 写的操作已经结束了。
+         * 请注意，close() 不会立即管理当前的连接，它也会返回一个 ChannelFuture。
          */
         final ChannelFuture f = ctx.writeAndFlush(time);
 
         /**
-         * How do we get notified when a write request is finished then? This is as simple as adding a ChannelFutureListener to the returned ChannelFuture. Here, we created a new anonymous ChannelFutureListener which closes the Channel when the operation is done.
+         * 当一个写的请求结束之后，怎么获取到通知。
+         * 简单的增加了一个 ChannelFutureListener。
+         * 这里我们创建了一个匿名的监听器，当操作完成之后操作关闭。
          */
         f.addListener(new ChannelFutureListener() {
             @Override

@@ -19,23 +19,25 @@ public class DiscardClient {
         int port = 8080;
         EventLoopGroup workerGroup = new NioEventLoopGroup();
 
+        final DiscardClientHandler discardClientHandler = new DiscardClientHandler();
+
         try {
-            Bootstrap b = new Bootstrap();
-            b.group(workerGroup);
-            b.channel(NioSocketChannel.class);
-            b.option(ChannelOption.SO_KEEPALIVE, true);
-            b.handler(new ChannelInitializer<SocketChannel>() {
+            Bootstrap bootstrap = new Bootstrap();
+            bootstrap.group(workerGroup);
+            bootstrap.channel(NioSocketChannel.class);
+            bootstrap.option(ChannelOption.SO_KEEPALIVE, true);
+            bootstrap.handler(new ChannelInitializer<SocketChannel>() {
                 @Override
                 public void initChannel(SocketChannel ch) throws Exception {
-                    ch.pipeline().addLast(new DiscardClientHandler());
+                    ch.pipeline().addLast(discardClientHandler);
                 }
             });
 
             // Start the client.
-            ChannelFuture f = b.connect(host, port).sync(); // (5)
+            ChannelFuture channelFuture = bootstrap.connect(host, port).sync(); // (5)
 
             // Wait until the connection is closed.
-            f.channel().closeFuture().sync();
+            channelFuture.channel().closeFuture().sync();
         } catch (Exception e) {
             e.printStackTrace();
         } finally {

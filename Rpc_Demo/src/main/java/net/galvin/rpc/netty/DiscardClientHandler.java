@@ -19,17 +19,20 @@ public class DiscardClientHandler extends ChannelInboundHandlerAdapter {
 
     @Override
     public void handlerAdded(ChannelHandlerContext ctx) {
+        System.out.println("Client ===>> handlerAdded");
         buf = ctx.alloc().buffer(4);
     }
 
     @Override
     public void handlerRemoved(ChannelHandlerContext ctx) {
+        System.out.println("Client ===>> handlerRemoved");
         buf.release();
         buf = null;
     }
 
     @Override
     public void channelRead(ChannelHandlerContext ctx, Object msg) {
+        System.out.println("Client ===>> channelRead");
         ByteBuf m = (ByteBuf) msg;
         buf.writeBytes(m);
         m.release();
@@ -42,10 +45,9 @@ public class DiscardClientHandler extends ChannelInboundHandlerAdapter {
 
     @Override
     public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) {
+        System.out.println("Client ===>> exceptionCaught");
         cause.printStackTrace();
         ctx.close();
     }
-
-
 
 }

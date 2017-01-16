@@ -1,2 +1,7 @@
 /.idea/*
 *.iml
+*/target/*
+将删除 .idea/
+将删除 ES_Demo/target/
+将删除 Galvin_Comm/target/
+将删除 Rpc_Demo/target/

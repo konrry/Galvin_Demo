@@ -19,8 +19,10 @@
         <module>Kafka_Demo</module>
         <module>ES_Demo</module>
         <module>Galvin_Comm</module>
+        <!--
         <module>Dubbo_Provider_Demo</module>
         <module>Dubbo_Consumer_Demo</module>
+        -->
         <module>Algorithm_Demo</module>
         <module>Zk_Demo</module>
         <module>Hadoop_Demo</module>

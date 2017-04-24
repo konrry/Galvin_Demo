@@ -1,5 +1,8 @@
 package net.galvin.comm.simple;
 
+import java.util.HashSet;
+import java.util.Set;
+
 /**
  * Created by qchu on 16-9-14.
  */
@@ -9,19 +12,14 @@ public class Demo {
         System.out.println(" Hello World ... ");
 
 
-
-        int status = 200;
-        int status1 = 20;
-        System.out.println(200 == status);
-        System.out.println(new Integer(200) == status);
-        System.out.println(new Integer(20) == status1);
+        String[] strArr = ",222".split(",");
+        for(String temp : strArr){
+            System.out.println(temp);
+        }
 
 
-        Integer integerA = 127;
-        Integer integerB = 127;
-
-        System.out.println(integerA == integerB);
-
+        Set<String> set = new HashSet<String>();
+        set.add(null);
 
     }
 

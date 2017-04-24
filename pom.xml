@@ -28,6 +28,7 @@
         <module>Hadoop_Demo</module>
         <module>Lvmm_Log_Demo</module>
         <module>Rpc_Demo</module>
+        <module>Spring_Demo</module>
     </modules>
 
 

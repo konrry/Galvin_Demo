@@ -9,17 +9,13 @@ import java.util.Set;
 public class Demo {
 
     public static void main(String[] args) {
-        System.out.println(" Hello World ... ");
 
-
-        String[] strArr = ",222".split(",");
-        for(String temp : strArr){
-            System.out.println(temp);
+        HelloService helloService = new HelloService();
+        try {
+            helloService.hello();
+        }catch (Exception e){
+            e.printStackTrace();
         }
-
-
-        Set<String> set = new HashSet<String>();
-        set.add(null);
 
     }
 

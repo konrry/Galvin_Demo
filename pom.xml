@@ -30,6 +30,7 @@
         <module>Rpc_Demo</module>
         <module>Spring_Demo</module>
         <module>Activemq_Demo</module>
+        <module>Canal_Demo</module>
     </modules>
 
 

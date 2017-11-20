@@ -9,28 +9,10 @@
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
     <modules>
-        <module>Simple_Demo</module>
-        <module>Simple_Demo</module>
         <module>Thread_Demo</module>
-        <module>Galvin_MQ</module>
-        <!--
-        <module>Jmx_Server_Demo</module>
-        -->
-        <module>Kafka_Demo</module>
-        <module>ES_Demo</module>
         <module>Galvin_Comm</module>
-        <!--
-        <module>Dubbo_Provider_Demo</module>
-        <module>Dubbo_Consumer_Demo</module>
-        -->
-        <module>Algorithm_Demo</module>
         <module>Zk_Demo</module>
-        <module>Hadoop_Demo</module>
-        <module>Lvmm_Log_Demo</module>
-        <module>Rpc_Demo</module>
-        <module>Spring_Demo</module>
         <module>Activemq_Demo</module>
-        <module>Canal_Demo</module>
     </modules>
 
 
